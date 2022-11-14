@@ -224,19 +224,21 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-.donate-select-line {
-  width: 915px;
-  height: 2px;
-  background: #72828e;
-  margin: 0 31px;
-  position: absolute;
-}
 .amount-selector-wrapper {
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 947px;
   height: 100%;
+}
+.amount-selector-wrapper::before {
+  width: 96%;
+  content: '';
+  height: 2px;
+  background: #72828e;
+  margin: 12px 0;
+  position: absolute;
+  left: 15px;
 }
 .amount-selector {
   width: 40px;
