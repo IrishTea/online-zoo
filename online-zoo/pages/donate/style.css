@@ -231,52 +231,65 @@ h1 {
   margin: 0 31px;
   position: absolute;
 }
-.amount-selector {
+.amount-selector-wrapper {
   position: relative;
-  width: 150px;
-  height: 40px;
-  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 947px;
+  height: 100%;
 }
-.amount-selector:last-child {
-  margin-right: -30px;
+.amount-selector {
+  width: 40px;
+  height: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+input[type='radio'] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
 .selector-radio {
-  z-index: 1;
-  border-radius: 50%;
-  height: 100%;
-}
-selector.radio:checked {
-  background: url(../../imgs/roller_icon.png);
-}
-.selector-radio:checked:after {
-  content: '';
-  width: 24px;
-  height: 24px;
-  border: none;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-}
-.selector-radio:checked + .selector-label:before {
   content: '';
   width: 10px;
   height: 10px;
   background-color: #ffee2e;
   border-radius: 50%;
 }
+.selector-radio:checked::before {
+  position: absolute;
+  z-index: 95;
+  left: 0px;
+  top: -6px;
+  content: '';
+  height: 40px;
+  width: 40px;
+  background: url(../../imgs/roller_icon.png);
+}
+.selector-radio:hover::before {
+  position: absolute;
+  z-index: 95;
+  left: 0px;
+  top: -6px;
+  content: '';
+  height: 40px;
+  width: 40px;
+  background: url(../../imgs/roller_icon.png);
+}
+.selector-radio:checked + .selector-label {
+  color: #fe9013;
+}
 .selector-label {
   position: absolute;
-  top: 46px;
-  left: -11px;
+  top: 41px;
+  left: -16px;
   font-weight: 500;
   font-size: 26px;
   line-height: 140%;
